@@ -52,17 +52,17 @@
 
 // Ask to user if select even or odd
 
-const userChoice = prompt("even or odd?")
+// const userChoice = prompt("even or odd?")
 
 // Ask to user a number beetween 1 and 5 
 
-const userNumber = Number(prompt("Choose a number from 1 to 5"))
+// const userNumber = Number(prompt("Choose a number from 1 to 5"))
 
 //Use Math random with math ceil to select a CPU's number 
 
-cpuNumber = random_number_in_a_int_range(1,5) 
-console.log(cpuNumber);
-alert(`CPU number is ${cpuNumber}`)
+// cpuNumber = random_number_in_a_int_range(1,5) 
+// console.log(cpuNumber);
+// alert(`CPU number is ${cpuNumber}`)
 
 //sum the numbers
 

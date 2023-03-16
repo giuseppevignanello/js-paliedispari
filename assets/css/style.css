@@ -1,0 +1,17 @@
+:root {
+
+    --bg_header: #F0F728;
+}
+
+
+/* #region header */
+
+#app_header {
+    background-color: var(--bg_header);
+    height: 80px;
+}
+
+
+
+
+/* #endregion header */
