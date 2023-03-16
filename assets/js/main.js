@@ -2,7 +2,25 @@
 // Chiedere all’utente di inserire una parola Creare una funzione per capire se la parola inserita è palindroma
 
 // ask a word to user with prompt
-//create a reversWord function with split and reverse
+
+const userWord = prompt("write a word to check if it is palindrome"); 
+console.log(userWord);
+
+//create a reverseWord function with split and reverse
+
+function reverseWord (word) {
+
+   const splitWord = word.split(""); 
+   const reverseList = splitWord.reverse(); 
+   const reverseText = reverseList.join(""); 
+
+   return reverseText
+} 
+
+console.log(reverseWord(userWord));
+
+
+
 //Create a if condition to check if the reverse word === original one. 
 
 
