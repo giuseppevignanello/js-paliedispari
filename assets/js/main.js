@@ -17,11 +17,15 @@ function reverseWord (word) {
    return reverseText
 } 
 
-console.log(reverseWord(userWord));
-
-
+const reversUserWord = (reverseWord(userWord));
 
 //Create a if condition to check if the reverse word === original one. 
+
+if (reversUserWord === userWord) {
+    alert(`${userWord} is palindrome`)
+} else {
+    alert (`${userWord} isn't palindrome`)
+}
 
 
 // tools
