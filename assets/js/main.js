@@ -79,14 +79,14 @@ palindromeSubmitEl.addEventListener("click",
 
 
 // Ask to user if select even or odd
-
+let userChoice = "";
 const numberSection = document.querySelector(".number_section")
 const evenOrOddSubmitEl = document.getElementById("even_or_odd_submit")
 evenOrOddSubmitEl.addEventListener("click",
 
     function () {
 
-        const userChoice = document.querySelector(".even_or_odd_input").value
+        userChoice = document.querySelector(".even_or_odd_input").value
         console.log(userChoice);
 
         const evenOrOddResult = document.createElement("div");
@@ -110,19 +110,28 @@ evenOrOddSubmitEl.addEventListener("click",
 
 
 const userNumberSubmitEl = document.getElementById("number_submit");
+const cpuNumberSectionEl = document.querySelector(".cpu_number_section")
+let userNumber = 0;
+let cpuNumber = 0; 
 
 userNumberSubmitEl.addEventListener("click",
 
     function () {
 
-        const userNumber = document.querySelector(".number_input").value;
-        const resultSectionEl = document.querySelector(".result_section");
+        userNumber = document.querySelector(".number_input").value;
         const userNumberResult = document.createElement("div");
         numberSection.append(userNumberResult);
         userNumberResult.append(userNumber);
         console.log(userNumber);
-        resultSectionEl.classList.add("d-block")
+        cpuNumberSectionEl.classList.add("d-block");
 
+         cpuNumber = random_number_in_a_int_range(1, 5);
+         const cpuNumberResult = document.createElement("div");
+         cpuNumberSectionEl.append(cpuNumberResult);
+         cpuNumberResult.append(cpuNumber);
+         console.log(cpuNumber);
+
+      
 
     }
 
@@ -130,19 +139,7 @@ userNumberSubmitEl.addEventListener("click",
 
 
 
-cpuNumber = random_number_in_a_int_range(1, 5)
-console.log(cpuNumber);
-
-
-
-//  alert(`CPU number is ${cpuNumber}`)
-
-//sum the numbers
-
 const sum = userNumber + cpuNumber
-
-//check if the sum is even or odd with a if condition 
-
 
 function isEven(numb) {
 
@@ -156,11 +153,6 @@ function isEven(numb) {
     return result
 }
 
-
-
-
-//check who the winner with a if condition
-
 if (userChoice === "even" && sumEven(sum) || userChoice === "odd" && !sumEven(sum)) {
     alert("User Win")
 } else {
@@ -168,16 +160,38 @@ if (userChoice === "even" && sumEven(sum) || userChoice === "odd" && !sumEven(su
 }
 
 
-
-
-//functions
-
 function random_number_in_a_int_range(min, max) {
 
     randomNumber = Math.ceil(Math.random(max - min) + 1);
     return randomNumber
 
 }
+
+
+
+
+
+
+//  alert(`CPU number is ${cpuNumber}`)
+
+//sum the numbers
+
+
+//check if the sum is even or odd with a if condition 
+
+
+
+
+
+
+//check who the winner with a if condition
+
+
+
+
+
+//functions
+
 
 //tools
 
