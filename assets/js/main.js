@@ -42,9 +42,26 @@ if (reversUserWord === userWord) {
 
 
 
-
-
-
-
 // Pari e Dispari
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
+
+
+
+// Ask to user if select even or odd
+// Ask to user a number beetween 1 and 5 
+//Use Math random with math ceil to select a CPU's number 
+//sum the numbers
+//check if the sum is even or odd with a if condition 
+//check who the winner with a if condition  
+
+
+
+//tools 
+
+//prompt
+// alert
+//if
+// function
+//math ceil
+// math random
+// variables 
