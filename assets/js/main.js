@@ -70,23 +70,31 @@ const sum = userNumber + cpuNumber
 
 //check if the sum is even or odd with a if condition 
 
-let result = ""
 
-if (sum % 2 === 0) {
+function isEven(numb) {
 
-    result = "even"
-} else {
-    result = "odd"
+    let result = false
+
+    if (numb % 2 === 0) {
+    
+        result = true
+    }
+
+    return result 
 }
 
 
-if (userChoice === result) {
+
+
+//check who the winner with a if condition
+
+if (userChoice === "even" && sumEven(sum) || userChoice === "odd" && !sumEven(sum) ) {
     alert("User Win")
 } else {
     alert("CPU Win ")
 }
 
-//check who the winner with a if condition
+
 
 
 //functions
