@@ -3,29 +3,32 @@
 
 // ask a word to user with prompt
 
-const userWord = prompt("write a word to check if it is palindrome"); 
-console.log(userWord);
 
-//create a reverseWord function with split and reverse
+// const userWord = prompt("write a word to check if it is palindrome"); 
+// console.log(userWord);
 
-function reverseWord (word) {
+// //create a reverseWord function with split and reverse
 
-   const splitWord = word.split(""); 
-   const reverseList = splitWord.reverse(); 
-   const reverseText = reverseList.join(""); 
+// function reverseWord (word) {
 
-   return reverseText
-} 
+//    const splitWord = word.split(""); 
+//    const reverseList = splitWord.reverse(); 
+//    const reverseText = reverseList.join(""); 
 
-const reversUserWord = (reverseWord(userWord));
+//    return reverseText
+// } 
 
-//Create a if condition to check if the reverse word === original one. 
+// const reversUserWord = (reverseWord(userWord));
 
-if (reversUserWord === userWord) {
-    alert(`${userWord} is palindrome`)
-} else {
-    alert (`${userWord} isn't palindrome`)
-}
+// //Create a if condition to check if the reverse word === original one. 
+
+// if (reversUserWord === userWord) {
+//     alert(`${userWord} is palindrome`)
+// } else {
+//     alert (`${userWord} isn't palindrome`)
+// }
+
+
 
 
 // tools
@@ -48,15 +51,46 @@ if (reversUserWord === userWord) {
 
 
 // Ask to user if select even or odd
+
+const userChoice = prompt("even or odd?")
+
 // Ask to user a number beetween 1 and 5 
+
+const userNumber = Number(prompt("Choose a number from 1 to 5"))
+
 //Use Math random with math ceil to select a CPU's number 
+
+const cpuNumber = Math.ceil(Math.random() * 5);
+console.log(cpuNumber);
+alert(`CPU number is ${cpuNumber}`)
+
 //sum the numbers
+
+const sum = userNumber + cpuNumber
+
 //check if the sum is even or odd with a if condition 
-//check who the winner with a if condition  
+
+let result = ""
+
+if (sum % 2 === 0) {
+
+    result = "even"
+} else {
+    result = "odd"
+}
+
+
+if (userChoice === result) {
+    alert("User Win")
+} else {
+    alert("CPU Win ")
+}
+
+//check who the winner with a if condition
 
 
 
-//tools 
+//tools
 
 //prompt
 // alert
