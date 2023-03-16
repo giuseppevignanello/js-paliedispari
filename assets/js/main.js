@@ -2,24 +2,37 @@
 // Chiedere all’utente di inserire una parola Creare una funzione per capire se la parola inserita è palindroma
 
 // ask a word to user with prompt
+function reverseWord(word) {
 
-const palindromeInputEl = document.querySelector(".palindrome_input");
-const userWord = palindromeInputEl.value;
+    const splitWord = word.split("");
+    const reverseList = splitWord.reverse();
+    const reverseText = reverseList.join("");
+
+    return reverseText
+}
+
+
+
+
+
+
 // const userWord = prompt("write a word to check if it is palindrome");
 
 const palindromeSubmitEl = document.getElementById("palindrome_submit");
-const reversUserWord = (reverseWord(userWord));
+
 const evenOrOddSectionEl = document.getElementById("even_or_odd");
 
 
 palindromeSubmitEl.addEventListener("click",
 
     function () {
+        let userWord = document.querySelector(".palindrome_input").value;
+        console.log(userWord);
         const palindromeSectionEl = document.getElementById("palindrome");
         const palindromeResult = document.createElement("div");
         palindromeSectionEl.append(palindromeResult)
-
-        if (reversUserWord === userWord) {
+        const reverseUserWord = (reverseWord(userWord));
+        if (reverseUserWord === userWord) {
             palindromeResult.append(`access allowed`)
             palindromeResult.style.backgroundColor = "green"
             evenOrOddSectionEl.classList.add("d-block")
@@ -29,7 +42,7 @@ palindromeSubmitEl.addEventListener("click",
             palindromeResult.style.backgroundColor = "red"
         }
 
-        palindromeInputEl.value = ""
+        userWord = ""
         console.log(userWord);
     }
 
@@ -39,14 +52,6 @@ palindromeSubmitEl.addEventListener("click",
 
 //create a reverseWord function with split and reverse
 
-function reverseWord(word) {
-
-    const splitWord = word.split("");
-    const reverseList = splitWord.reverse();
-    const reverseText = reverseList.join("");
-
-    return reverseText
-}
 
 
 // //Create a if condition to check if the reverse word === original one. 
@@ -75,21 +80,22 @@ function reverseWord(word) {
 
 // Ask to user if select even or odd
 
-const evenOrOddInputEl = document.querySelector(".even_or_odd_input")
-
-const userChoice = evenOrOddInputEl.value
 const numberSection = document.querySelector(".number_section")
 const evenOrOddSubmitEl = document.getElementById("even_or_odd_submit")
 evenOrOddSubmitEl.addEventListener("click",
 
     function () {
+
+        const userChoice = document.querySelector(".even_or_odd_input").value
+        console.log(userChoice);
+
         const evenOrOddResult = document.createElement("div");
         evenOrOddSectionEl.append(evenOrOddResult);
         evenOrOddResult.append(userChoice);
         console.log(userChoice);
         numberSection.classList.add("d-block")
 
-     
+
     }
 
 )
@@ -102,29 +108,30 @@ evenOrOddSubmitEl.addEventListener("click",
 //Use Math random with math ceil to select a CPU's number 
 
 
-const userNumberSubmitEl = document.getElementById("number_submit")
-const userNumberInputEl = document.querySelector(".number_input")
-const resultSectionEl = document.querySelector(".result_section")
 
-const userNumber = userNumberInputEl.value
+const userNumberSubmitEl = document.getElementById("number_submit");
+
 userNumberSubmitEl.addEventListener("click",
 
     function () {
+
+        const userNumber = document.querySelector(".number_input").value;
+        const resultSectionEl = document.querySelector(".result_section");
         const userNumberResult = document.createElement("div");
         numberSection.append(userNumberResult);
-        userNumberResult.insertAdjacentHTML = userNumber;
+        userNumberResult.append(userNumber);
         console.log(userNumber);
         resultSectionEl.classList.add("d-block")
 
-     
+
     }
 
 )
 
 
 
- cpuNumber = random_number_in_a_int_range(1,5) 
- console.log(cpuNumber);
+cpuNumber = random_number_in_a_int_range(1, 5)
+console.log(cpuNumber);
 
 
 
