@@ -3,30 +3,53 @@
 
 // ask a word to user with prompt
 
+const palindromeInputEl = document.querySelector(".palindrome_input"); 
+const userWord = palindromeInputEl.value; 
+// const userWord = prompt("write a word to check if it is palindrome");
 
-// const userWord = prompt("write a word to check if it is palindrome"); 
-// console.log(userWord);
+const palindromeSubmitEl = document.getElementById("palindrome_submit"); 
+const reversUserWord = (reverseWord(userWord));
+const evenOrOddEl = document.getElementById("even_or_odd");
 
-// //create a reverseWord function with split and reverse
 
-// function reverseWord (word) {
+palindromeSubmitEl.addEventListener ("click", 
 
-//    const splitWord = word.split(""); 
-//    const reverseList = splitWord.reverse(); 
-//    const reverseText = reverseList.join(""); 
+function() {
+const palindromeSectionEl = document.getElementById("palindrome");
+const palindromeResult = document.createElement("div"); 
+palindromeSectionEl.append(palindromeResult)
 
-//    return reverseText
-// } 
+if (reversUserWord === userWord) {
+   palindromeResult.append(`access allowed`)
+   palindromeResult.style.backgroundColor = "green"
+   evenOrOddEl.classList.add("d-block")
 
-// const reversUserWord = (reverseWord(userWord));
+} else {
+    palindromeResult.append(`access denied`)
+    palindromeResult.style.backgroundColor = "red"
+}
+
+
+console.log(userWord);
+}
+
+)
+
+
+
+//create a reverseWord function with split and reverse
+
+function reverseWord(word) {
+
+    const splitWord = word.split("");
+    const reverseList = splitWord.reverse();
+    const reverseText = reverseList.join("");
+
+    return reverseText
+}
+
 
 // //Create a if condition to check if the reverse word === original one. 
-
-// if (reversUserWord === userWord) {
-//     alert(`${userWord} is palindrome`)
-// } else {
-//     alert (`${userWord} isn't palindrome`)
-// }
 
 
 
@@ -76,11 +99,11 @@ function isEven(numb) {
     let result = false
 
     if (numb % 2 === 0) {
-    
+
         result = true
     }
 
-    return result 
+    return result
 }
 
 
@@ -88,7 +111,7 @@ function isEven(numb) {
 
 //check who the winner with a if condition
 
-if (userChoice === "even" && sumEven(sum) || userChoice === "odd" && !sumEven(sum) ) {
+if (userChoice === "even" && sumEven(sum) || userChoice === "odd" && !sumEven(sum)) {
     alert("User Win")
 } else {
     alert("CPU Win ")
@@ -101,8 +124,8 @@ if (userChoice === "even" && sumEven(sum) || userChoice === "odd" && !sumEven(su
 
 function random_number_in_a_int_range(min, max) {
 
-    randomNumber = Math.ceil(Math.random (max - min) + 1); 
-    return randomNumber 
+    randomNumber = Math.ceil(Math.random(max - min) + 1);
+    return randomNumber
 
 }
 
