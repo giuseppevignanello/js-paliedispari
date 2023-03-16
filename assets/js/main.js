@@ -101,8 +101,33 @@ evenOrOddSubmitEl.addEventListener("click",
 
 //Use Math random with math ceil to select a CPU's number 
 
-//  cpuNumber = random_number_in_a_int_range(1,5) 
-//  console.log(cpuNumber);
+
+const userNumberSubmitEl = document.getElementById("number_submit")
+const userNumberInputEl = document.querySelector(".number_input")
+const resultSectionEl = document.querySelector(".result_section")
+
+const userNumber = userNumberInputEl.value
+userNumberSubmitEl.addEventListener("click",
+
+    function () {
+        const userNumberResult = document.createElement("div");
+        numberSection.append(userNumberResult);
+        userNumberResult.insertAdjacentHTML = userNumber;
+        console.log(userNumber);
+        resultSectionEl.classList.add("d-block")
+
+     
+    }
+
+)
+
+
+
+ cpuNumber = random_number_in_a_int_range(1,5) 
+ console.log(cpuNumber);
+
+
+
 //  alert(`CPU number is ${cpuNumber}`)
 
 //sum the numbers
