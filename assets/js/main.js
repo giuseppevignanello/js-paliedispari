@@ -3,35 +3,35 @@
 
 // ask a word to user with prompt
 
-const palindromeInputEl = document.querySelector(".palindrome_input"); 
-const userWord = palindromeInputEl.value; 
+const palindromeInputEl = document.querySelector(".palindrome_input");
+const userWord = palindromeInputEl.value;
 // const userWord = prompt("write a word to check if it is palindrome");
 
-const palindromeSubmitEl = document.getElementById("palindrome_submit"); 
+const palindromeSubmitEl = document.getElementById("palindrome_submit");
 const reversUserWord = (reverseWord(userWord));
-const evenOrOddEl = document.getElementById("even_or_odd");
+const evenOrOddSectionEl = document.getElementById("even_or_odd");
 
 
-palindromeSubmitEl.addEventListener ("click", 
+palindromeSubmitEl.addEventListener("click",
 
-function() {
-const palindromeSectionEl = document.getElementById("palindrome");
-const palindromeResult = document.createElement("div"); 
-palindromeSectionEl.append(palindromeResult)
+    function () {
+        const palindromeSectionEl = document.getElementById("palindrome");
+        const palindromeResult = document.createElement("div");
+        palindromeSectionEl.append(palindromeResult)
 
-if (reversUserWord === userWord) {
-   palindromeResult.append(`access allowed`)
-   palindromeResult.style.backgroundColor = "green"
-   evenOrOddEl.classList.add("d-block")
+        if (reversUserWord === userWord) {
+            palindromeResult.append(`access allowed`)
+            palindromeResult.style.backgroundColor = "green"
+            evenOrOddSectionEl.classList.add("d-block")
 
-} else {
-    palindromeResult.append(`access denied`)
-    palindromeResult.style.backgroundColor = "red"
-}
+        } else {
+            palindromeResult.append(`access denied`)
+            palindromeResult.style.backgroundColor = "red"
+        }
 
-
-console.log(userWord);
-}
+        palindromeInputEl.value = ""
+        console.log(userWord);
+    }
 
 )
 
@@ -75,7 +75,25 @@ function reverseWord(word) {
 
 // Ask to user if select even or odd
 
-// const userChoice = prompt("even or odd?")
+const evenOrOddInputEl = document.querySelector(".even_or_odd_input")
+
+const userChoice = evenOrOddInputEl.value
+const numberSection = document.querySelector(".number_section")
+const evenOrOddSubmitEl = document.getElementById("even_or_odd_submit")
+evenOrOddSubmitEl.addEventListener("click",
+
+    function () {
+        const evenOrOddResult = document.createElement("div");
+        evenOrOddSectionEl.append(evenOrOddResult);
+        evenOrOddResult.append(userChoice);
+        console.log(userChoice);
+        numberSection.classList.add("d-block")
+
+     
+    }
+
+)
+
 
 // Ask to user a number beetween 1 and 5 
 
@@ -83,9 +101,9 @@ function reverseWord(word) {
 
 //Use Math random with math ceil to select a CPU's number 
 
-// cpuNumber = random_number_in_a_int_range(1,5) 
-// console.log(cpuNumber);
-// alert(`CPU number is ${cpuNumber}`)
+//  cpuNumber = random_number_in_a_int_range(1,5) 
+//  console.log(cpuNumber);
+//  alert(`CPU number is ${cpuNumber}`)
 
 //sum the numbers
 

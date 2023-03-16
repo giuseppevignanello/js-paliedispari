@@ -16,6 +16,6 @@
 
 /* #endregion header */
 
-#even_or_odd, #numberSection, #result_section {
+section:not(#palindrome) {
     display: none;
 }
