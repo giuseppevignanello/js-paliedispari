@@ -60,7 +60,7 @@ const userNumber = Number(prompt("Choose a number from 1 to 5"))
 
 //Use Math random with math ceil to select a CPU's number 
 
-const cpuNumber = Math.ceil(Math.random() * 5);
+cpuNumber = random_number_in_a_int_range(1,5) 
 console.log(cpuNumber);
 alert(`CPU number is ${cpuNumber}`)
 
@@ -89,6 +89,14 @@ if (userChoice === result) {
 //check who the winner with a if condition
 
 
+//functions
+
+function random_number_in_a_int_range(min, max) {
+
+    randomNumber = Math.ceil(Math.random (max - min) + 1); 
+    return randomNumber 
+
+}
 
 //tools
 
