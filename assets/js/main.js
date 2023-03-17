@@ -162,7 +162,7 @@ if (userChoice === "even" && sumEven(sum) || userChoice === "odd" && !sumEven(su
 
 function random_number_in_a_int_range(min, max) {
 
-    randomNumber = Math.ceil(Math.random(max - min) + 1);
+    randomNumber = Number(Math.ceil(Math.random() * (max - min) + 1));
     return randomNumber
 
 }
